@@ -1,0 +1,30 @@
+﻿@page "/user"
+
+@attribute [TabItemOption(Text = "用户管理", Icon = "fa-fw fa-solid fa-desktop")]
+<AdminTable TItem="UserEntity" @ref="_adminTable" Items="@userEntities">
+    <TableColumns>
+        <TableColumn @bind-Field="@context.UserName" IsReadonlyWhenEdit="true"></TableColumn>
+        <TableColumn @bind-Field="@context.NickName"></TableColumn>
+        <TableColumn @bind-Field="@context.RoleId" Text="角色" LookupServiceKey="role"></TableColumn>
+    </TableColumns>
+    <TableExtensionToolbarTemplate>
+        <ButtonUpload TValue="string" ShowUploadFileList="false" BrowserButtonClass="btn-secondary" BrowserButtonText="导入" />
+    </TableExtensionToolbarTemplate>
+</AdminTable>
+@code {
+    private AdminTable<UserEntity> _adminTable;
+    private List<UserEntity> userEntities { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        //获取随机数据
+        //Get random data
+        userEntities = new List<UserEntity>
+    {
+        new UserEntity("张三", "小三"),
+        new UserEntity("李四", "小四")
+    };
+    }
+
+
+}

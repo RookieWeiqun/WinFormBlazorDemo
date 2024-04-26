@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LoginLayout.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LoginLayout.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BootstrapBlazor" Version="8.0.0" />
+    <PackageReference Include="BootstrapBlazor.FontAwesome" Version="8.0.0" />
+    <PackageReference Include="FreeSql.Extensions.BaseEntity" Version="3.2.821" />
+    <PackageReference Include="FreeSql.Provider.MySql" Version="3.2.821" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="8.0.21" />
+  </ItemGroup>
+
+</Project>

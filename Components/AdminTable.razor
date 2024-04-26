@@ -1,0 +1,8 @@
+﻿@typeparam TItem
+
+<Table TItem="TItem" @ref="_table" IsBordered="true" IsStriped="true" TableColumns="TableColumns" ShowToolbar="ShowToolbar" ShowExtendButtons="true"
+       IsTree="IsTree" TreeNodeConverter="TreeNodeConverter" IsPagination="IsPagination" PageItemsSource="new []{10, 20, 50}"
+       BeforeRowButtonTemplate="BeforeRowButtonTemplate" RowButtonTemplate="RowButtonTemplate" IsMultipleSelect="IsMultipleSelect"
+       ShowExtendEditButtonCallback="ShowExtendEditButtonCallback" ShowExtendDeleteButtonCallback="ShowExtendDeleteButtonCallback"
+       TableToolbarTemplate="TableToolbarTemplate" TableExtensionToolbarTemplate="TableExtensionToolbarTemplate"
+       OnSaveAsync="OnSaveAsync" OnDeleteAsync="OnDeleteAsync" PageItems="20" Items="items"></Table>
